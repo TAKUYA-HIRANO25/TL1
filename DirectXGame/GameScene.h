@@ -23,4 +23,10 @@ private:
 	std::vector<JsonObj> jsonObj_;
 
 	KamataEngine::DirectXCommon* dxCommon_ = nullptr;
+
+	KamataEngine::Input* input = nullptr;
+
+	KamataEngine::DebugCamera* debugCamera_ = nullptr;
+
+	bool isDebugCameraActive_ = false;
 };

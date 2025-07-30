@@ -9,7 +9,8 @@ using namespace KamataEngine;
 
 void GameScene::Initialize() { 
 	camera_.Initialize(); 
-
+	input = Input::GetInstance();
+	debugCamera_ = new DebugCamera(1280, 720);
 	// レベルエディタを格納するための構造体
 	// オブジェクト 1個分のデータ
 	struct ObjectData {
@@ -135,6 +136,25 @@ void GameScene::Update() {
 
 	for (auto& jsonObj : jsonObj_) {
 		jsonObj.worldTransform->UpdateMatrix();
+	}
+
+	if(input->TriggerKey(DIK_SPACE)) {
+		if (!isDebugCameraActive_) {
+			isDebugCameraActive_ = true;
+		} else {
+			isDebugCameraActive_ = false;
+		}
+	}
+
+	if (isDebugCameraActive_) {
+		// デバッグカメラの更新
+		debugCamera_->Update();
+		camera_.matView = debugCamera_->GetCamera().matView;
+		camera_.matProjection = debugCamera_->GetCamera().matProjection;
+		// ビュープロジェクション行列の転送
+		camera_.TransferMatrix();
+	} else {
+		camera_.TransferMatrix();
 	}
 }
 
