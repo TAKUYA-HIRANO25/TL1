@@ -2,6 +2,41 @@
     "name": "scene",
     "objects": [
         {
+            "type": "MESH",
+            "name": "Cube",
+            "transform": {
+                "translation": [
+                    -4.792017459869385,
+                    0.0,
+                    0.0
+                ],
+                "rotation": [
+                    0.0,
+                    -0.0,
+                    0.0
+                ],
+                "scaling": [
+                    1.0,
+                    1.0,
+                    1.0
+                ]
+            },
+            "file_name": "box",
+            "collider": {
+                "type": "BOX",
+                "center": [
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "size": [
+                    2.0,
+                    2.0,
+                    2.0
+                ]
+            }
+        },
+        {
             "type": "LIGHT",
             "name": "Light",
             "transform": {
@@ -48,28 +83,6 @@
             "name": "ICO球",
             "transform": {
                 "translation": [
-                    -2.707991600036621,
-                    4.945774078369141,
-                    2.34273099899292
-                ],
-                "rotation": [
-                    0.0,
-                    -0.0,
-                    0.0
-                ],
-                "scaling": [
-                    1.0,
-                    1.0,
-                    1.0
-                ]
-            },
-            "file_name": "ICO"
-        },
-        {
-            "type": "MESH",
-            "name": "球",
-            "transform": {
-                "translation": [
                     0.0,
                     0.0,
                     0.0
@@ -85,29 +98,20 @@
                     1.0
                 ]
             },
-            "file_name": "Player"
-        },
-        {
-            "type": "MESH",
-            "name": "立方体",
-            "transform": {
-                "translation": [
-                    2.486952543258667,
-                    5.434514999389648,
-                    -1.6001062393188477
-                ],
-                "rotation": [
+            "file_name": "ICO",
+            "collider": {
+                "type": "BOX",
+                "center": [
                     0.0,
-                    -0.0,
+                    0.0,
                     0.0
                 ],
-                "scaling": [
-                    1.0,
-                    1.0,
-                    1.0
+                "size": [
+                    2.0,
+                    2.0,
+                    2.0
                 ]
-            },
-            "file_name": "box"
+            }
         }
     ]
 }
